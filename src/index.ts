@@ -95,9 +95,20 @@ async function main() {
   const text = buildDigestText(changes);
   const subject = `IEEE Funding Digest - ${changes.filter((c) => c.kind === "new").length} new, ${changes.filter((c) => c.kind === "changed").length} updated`;
 
-  await sendDigestEmail(subject, html, text);
+  // Email is a nice-to-have on top of the site, not the core function - an
+  // unconfigured/failing SMTP setup should never block the site from staying
+  // current or the store from saving (which is what used to happen: a thrown
+  // error here skipped saveSeenStore entirely, so the next run would just
+  // see the exact same "new" items again, forever).
+  try {
+    await sendDigestEmail(subject, html, text);
+    console.log("Digest emailed.");
+  } catch (err) {
+    console.warn("Digest email NOT sent:", (err as Error).message);
+  }
+
   await saveSeenStore(updatedStore);
-  console.log("Digest emailed and store updated.");
+  console.log("Store updated.");
 }
 
 main().catch((err) => {

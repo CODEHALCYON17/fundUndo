@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .env
-data/seen.json
-data/site-meta.json
 *.log
+# data/seen.json and data/site-meta.json are intentionally tracked, not
+# ignored - GitHub Actions runs from a clean checkout each time, so this
+# state needs to live in the repo to persist between scheduled runs.

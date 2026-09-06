@@ -1,0 +1,56 @@
+name: Publish FundUndo site
+
+on:
+  schedule:
+    # 08:00 IST daily = 02:30 UTC. GitHub's cron always runs in UTC.
+    - cron: "30 2 * * *"
+  workflow_dispatch: {} # lets you trigger a run manually from the Actions tab
+
+permissions:
+  contents: write # needed to commit+push docs/ and data/ back to the repo
+
+concurrency:
+  group: fundundo-publish
+  cancel-in-progress: false # let a running publish finish rather than clobber it
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90 # generous headroom for Groq rate-limit backoffs, but bounded
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Run the funding pipeline
+        env:
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_SECURE: ${{ secrets.SMTP_SECURE }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          DIGEST_TO: ${{ secrets.DIGEST_TO }}
+          DIGEST_FROM: ${{ secrets.DIGEST_FROM }}
+        run: node dist/index.js
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "fundundo-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git diff --quiet -- docs/ data/; then
+            git add docs/ data/
+            git commit -m "Automated update - $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          else
+            echo "No changes to publish."
+          fi
