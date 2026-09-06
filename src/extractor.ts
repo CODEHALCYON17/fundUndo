@@ -27,6 +27,14 @@ function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+// A single source demanding a very long Retry-After (we've seen 1000s+
+// during heavy free-tier usage) shouldn't be allowed to block the entire
+// run - with 28 sources, a few of those would blow past any sane job
+// timeout and mean NOTHING gets published, not even the sources that
+// would have succeeded quickly. Past this cap, skip the source for this
+// run instead of waiting it out (it'll just get picked up again next run).
+const MAX_RETRY_WAIT_SECONDS = Number(process.env.MAX_RETRY_WAIT_SECONDS || 120);
+
 /**
  * Calls the configured OpenAI-compatible /chat/completions endpoint, with a
  * couple of retries on 429 (free-tier rate limits are easy to hit).
@@ -66,6 +74,11 @@ async function chatComplete(prompt: string): Promise<string> {
 
     if (res.status === 429 && attempt < maxAttempts) {
       const retryAfter = Number(res.headers.get("retry-after")) || attempt * 5;
+      if (retryAfter > MAX_RETRY_WAIT_SECONDS) {
+        throw new Error(
+          `rate limited, requested ${retryAfter}s wait exceeds the ${MAX_RETRY_WAIT_SECONDS}s cap - skipping this source for now rather than blocking the whole run`
+        );
+      }
       console.warn(`  rate limited, retrying in ${retryAfter}s (attempt ${attempt}/${maxAttempts})`);
       await sleep(retryAfter * 1000);
       continue;
