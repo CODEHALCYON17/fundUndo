@@ -130,17 +130,17 @@ function sectionHtml(society: string, opportunities: Opportunity[], index: numbe
     .join("");
   return `
     <section class="fu-section" data-society="${escapeAttr(meta.tag)}" style="position:relative;">
-      <span style="position:absolute; left:-6px; top:-30px; font-family:'Bricolage Grotesque', serif; font-weight:800; font-size:80px; color:oklch(90% 0.06 ${meta.hue}); z-index:0; user-select:none;">${String(index + 1).padStart(2, "0")}</span>
+      <span class="fu-index-num" style="position:absolute; left:-6px; top:-30px; font-family:'Bricolage Grotesque', serif; font-weight:800; font-size:80px; color:oklch(90% 0.06 ${meta.hue}); z-index:0; user-select:none;">${String(index + 1).padStart(2, "0")}</span>
       <div style="position:relative; display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
-        <div style="display:flex; align-items:center; gap:14px;">
+        <div style="display:flex; align-items:center; gap:14px; min-width:0;">
           ${iconSvg(society, hex)}
-          <div>
-            <span style="font-family:'Bricolage Grotesque', serif; font-weight:700; font-size:23px; color:oklch(19% 0.025 50);">${escapeHtml(society)}</span>
+          <div style="min-width:0;">
+            <span class="fu-society-name" style="font-family:'Bricolage Grotesque', serif; font-weight:700; font-size:23px; color:oklch(19% 0.025 50);">${escapeHtml(society)}</span>
           </div>
         </div>
         <span style="padding:4px 12px; border-radius:7px; background:oklch(92% 0.08 ${meta.hue}); color:oklch(32% 0.13 ${meta.hue}); border:1px solid oklch(76% 0.11 ${meta.hue}); font-size:12.5px; font-weight:700;">${opportunities.length} open</span>
       </div>
-      <div class="fu-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:18px;">${cards}
+      <div class="fu-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap:18px;">${cards}
       </div>
     </section>`;
 }
@@ -199,8 +199,10 @@ export function buildSiteHtml(opportunities: Opportunity[], generatedAt: Date): 
 <style>
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  html, body { overflow-x: hidden; max-width: 100%; }
   body { margin: 0; font-family: 'Karla', -apple-system, 'Segoe UI', sans-serif; background: oklch(96.5% 0.02 85) radial-gradient(oklch(89% 0.02 75) 1px, transparent 1.4px); background-size: 100% 100%, 16px 16px; color: oklch(19% 0.025 50); }
   a { color: inherit; text-decoration: none; }
+  input { font-size: 16px; } /* prevents iOS Safari auto-zoom on focus */
   .fu-link:hover { color: oklch(35% 0.16 38) !important; }
   .fu-chip:hover { border-color: oklch(60% 0.02 60) !important; }
   .fu-chip.fu-active { background: oklch(66% 0.18 42) !important; color: white !important; border-color: oklch(66% 0.18 42) !important; }
@@ -209,12 +211,26 @@ export function buildSiteHtml(opportunities: Opportunity[], generatedAt: Date): 
   @media (max-width: 820px) {
     .fu-header, .fu-statsbar, .fu-hero, .fu-sections, .fu-tracked, .fu-footer { padding-left: 24px !important; padding-right: 24px !important; }
     .fu-hero h1 { font-size: 28px !important; }
+    .fu-hero { padding-top: 32px !important; padding-bottom: 24px !important; }
+    .fu-index-num { font-size: 56px !important; top: -20px !important; }
+    .fu-chip { padding-top: 8px !important; padding-bottom: 8px !important; }
+  }
+  @media (max-width: 480px) {
+    .fu-header, .fu-statsbar, .fu-hero, .fu-sections, .fu-tracked, .fu-footer { padding-left: 16px !important; padding-right: 16px !important; }
+    .fu-header { flex-direction: column; align-items: stretch !important; }
+    .fu-search-wrap { width: 100% !important; }
+    .fu-hero h1 { font-size: 23px !important; }
+    .fu-hero p { font-size: 14px !important; }
+    .fu-sections { gap: 40px !important; }
+    .fu-blob { display: none; }
+    .fu-index-num { display: none; }
+    .fu-society-name { font-size: 19px !important; }
   }
 </style>
 </head>
 <body>
 
-<div class="fu-header" style="height:76px; background:oklch(27% 0.08 250); display:flex; align-items:center; justify-content:space-between; padding:0 64px; flex-wrap:wrap; gap:12px;">
+<div class="fu-header" style="min-height:76px; background:oklch(27% 0.08 250); display:flex; align-items:center; justify-content:space-between; padding:14px 64px; flex-wrap:wrap; gap:12px;">
   <div style="display:flex; align-items:center; gap:11px;">
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
       <path d="M16 14c-0.8-4-4-6-4.3-6.2 -0.2 0.5 0.6 4.4 4.3 6.2z" stroke="oklch(76% 0.15 55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -224,7 +240,7 @@ export function buildSiteHtml(opportunities: Opportunity[], generatedAt: Date): 
     </svg>
     <span style="font-family:'Bricolage Grotesque', serif; font-weight:700; font-size:22px; color:white;">FundUndo</span>
   </div>
-  <div style="position:relative; width:270px; max-width:100%;">
+  <div class="fu-search-wrap" style="position:relative; width:270px; max-width:100%;">
     <svg width="15" height="15" viewBox="0 0 20 20" fill="none" style="position:absolute; left:14px; top:50%; transform:translateY(-50%);">
       <circle cx="8.5" cy="8.5" r="6" stroke="oklch(50% 0.03 60)" stroke-width="1.7"/>
       <path d="M13.2 13.2L17 17" stroke="oklch(50% 0.03 60)" stroke-width="1.7" stroke-linecap="round"/>
@@ -247,7 +263,7 @@ export function buildSiteHtml(opportunities: Opportunity[], generatedAt: Date): 
 </div>
 
 <div class="fu-hero" style="padding:48px 64px 32px 64px; position:relative;">
-  <div style="position:absolute; left:380px; top:10px; width:340px; height:340px; background:oklch(76% 0.15 55 / 0.22); border-radius:50%; filter:blur(60px); pointer-events:none;"></div>
+  <div class="fu-blob" style="position:absolute; left:380px; top:10px; width:340px; height:340px; background:oklch(76% 0.15 55 / 0.22); border-radius:50%; filter:blur(60px); pointer-events:none;"></div>
   <h1 style="margin:0; position:relative; font-family:'Bricolage Grotesque', serif; font-weight:700; font-size:38px; line-height:1.2; max-width:680px;">Every open IEEE funding call. In one place, finally.</h1>
   <p style="margin:16px 0 0 0; font-size:15.5px; color:oklch(42% 0.025 55); line-height:1.65; max-width:600px;">Grants, scholarships, fellowships, and travel awards — tracked automatically across every IEEE Foundation, board, and society page we could find.</p>
 </div>
