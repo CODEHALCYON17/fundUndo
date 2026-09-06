@@ -1,0 +1,170 @@
+[
+  {
+    "name": "IEEE Foundation - General Funding Requests",
+    "url": "https://www.ieeefoundation.org/funding-requests/",
+    "society": "IEEE Foundation",
+    "notes": "Main competitive grant program for IEEE units/chapters. Has real amounts ($5K-$50K, up to $100K) and two fixed annual application cycles."
+  },
+  {
+    "name": "IEEE Foundation - Students & Young Professionals",
+    "url": "https://www.ieeefoundation.org/students-and-young-professionals/",
+    "society": "IEEE Foundation",
+    "notes": "Directory of ~60 scholarships/grants/fellowships across societies. Amounts/deadlines usually NOT listed here - use to spot new named opportunities, then add their own page below once found."
+  },
+  {
+    "name": "IEEE Students - Funds and Awards",
+    "url": "https://students.ieee.org/membership-benefits/ieee-benefits/funds-and-awards/",
+    "society": "IEEE-wide",
+    "notes": "High-level student funding categories, links to Student Awards Portal."
+  },
+  {
+    "name": "IEEE New Initiatives Program",
+    "url": "https://www.ieee.org/about/corporate/initiatives",
+    "society": "IEEE-wide",
+    "notes": "IEEE-wide Seed Grants and New Initiatives funding for larger internal projects."
+  },
+  {
+    "name": "IEEE Antennas & Propagation Society - Research and Travel Grants",
+    "url": "https://ieeeaps.org/education/research-and-travel-grants",
+    "society": "Antennas & Propagation Society",
+    "notes": "Society-specific research/travel grants, usually has concrete amounts and deadlines."
+  },
+  {
+    "name": "IEEE Region 6 - Funding Partnerships and Opportunities",
+    "url": "https://ieee-region6.org/interests/funding-partnerships-and-opportunities/",
+    "society": "IEEE-wide",
+    "notes": "Regional funding opportunities (Region 6 = Western USA). NOTE: currently fails - server's TLS cert doesn't cover this hostname (real misconfiguration on their end)."
+  },
+  {
+    "name": "IEEE HTB - Tech4Good Call for Proposals",
+    "url": "https://ieeeht.org/get-involved/funding-opportunities/tech4good/",
+    "society": "Humanitarian Technologies Board",
+    "notes": "Main Tech4Good project grants for IEEE member teams doing humanitarian tech work. $2,500-$10,000 per project."
+  },
+  {
+    "name": "IEEE HTB - ComSoc & Tech4Good Communication for All",
+    "url": "https://www.comsoc.org/membership/communications-for-all",
+    "society": "Humanitarian Technologies Board",
+    "notes": "Joint ComSoc/Tech4Good call for digital-divide/connectivity projects."
+  },
+  {
+    "name": "IEEE HTB - EDS & Tech4Good Call for Proposals",
+    "url": "https://ieeeht.org/get-involved/funding-opportunities/eds-t4g-cfp25/",
+    "society": "Humanitarian Technologies Board",
+    "notes": "Joint Electron Devices Society/Tech4Good call. $2,500-$10,000 per project."
+  },
+  {
+    "name": "IEEE HTB - Region 8 Tech Catalyst Program",
+    "url": "https://ieeeht.org/get-involved/funding-opportunities/r8-t4g-2026/",
+    "society": "Humanitarian Technologies Board",
+    "notes": "Project grants for SIGHT Groups in Region 8. $1,000-$5,000 per project."
+  },
+  {
+    "name": "IEEE HTB - Event Sponsorship",
+    "url": "https://ieeeht.org/get-involved/funding-opportunities/htb-events/",
+    "society": "Humanitarian Technologies Board",
+    "notes": "Sponsorship funding for humanitarian-tech-focused IEEE events. Gold tier up to $5,000, Silver up to $2,500."
+  },
+  {
+    "name": "IEEE HTB - AP-S Tech for Impact Challenge",
+    "url": "https://ieeeht.org/get-involved/funding-opportunities/apschallenge2026/",
+    "society": "Humanitarian Technologies Board",
+    "notes": "Joint AP-S/Tech4Good disaster-response tech challenge. Up to $25,000."
+  },
+  {
+    "name": "IEEE Signal Processing Society - Scholarship Program",
+    "url": "https://signalprocessingsociety.org/community-involvement/sps-scholarship-program",
+    "society": "Signal Processing Society",
+    "notes": "SPS's flagship student scholarship (up to $7,000 over 3 years)."
+  },
+  {
+    "name": "IEEE Signal Processing Society - Travel Grants",
+    "url": "https://signalprocessingsociety.org/events/sps-travel-grants",
+    "society": "Signal Processing Society",
+    "notes": "Conference travel grants for student/developing-country authors."
+  },
+  {
+    "name": "IEEE Computer Society - Scholarships and Awards",
+    "url": "https://www.computer.org/volunteering/awards/scholarships",
+    "society": "Computer Society",
+    "notes": "Merwin Scholarship, Larson Paper Contest, WEIGD Student Support Fund, chapter grants, etc."
+  },
+  {
+    "name": "IEEE Young Professionals - Event Funding",
+    "url": "https://yp.ieee.org/volunteers/event-funding/",
+    "society": "Young Professionals",
+    "notes": "STEP/Local Activity/Meet-Up funding tiers ($500-$1,500) for YP-aligned events."
+  },
+  {
+    "name": "IEEE Robotics and Automation Society - Member Support Program",
+    "url": "https://www.ieee-ras.org/membership/member-support-program/",
+    "society": "Robotics & Automation Society",
+    "notes": "RAS travel grants (~$1,500) for student/developing-country members presenting at RAS conferences."
+  },
+  {
+    "name": "IEEE RAS - Support for Chapters",
+    "url": "https://www.ieee-ras.org/chapters/support-for-chapters",
+    "society": "Robotics & Automation Society",
+    "notes": "RAS's equivalent of a chapter/membership-development fund (not literally named MDI like SPS, but same purpose): Chapter Start-Up Grant ($500) and Chapter Initiative Grant (up to $2,000), reviewed twice yearly (31 Jan / 31 May)."
+  },
+  {
+    "name": "IEEE RAS - Technical Education Program (RAS-TEP)",
+    "url": "https://www.ieee-ras.org/educational-resources-outreach/technical-education-programs/",
+    "society": "Robotics & Automation Society",
+    "notes": "RAS's TEP/Seasonal Schools funding: Main Track (up to $25,000), Emerging Track and Practitioner Track (up to $10,000 each). Page also lists a long historical archive of past schools - extractor prompt is tuned to collapse that into just the 3 current tracks."
+  },
+  {
+    "name": "IEEE SPS - Organize Local Initiatives (Member Driven Initiatives)",
+    "url": "https://signalprocessingsociety.org/community-involvement/organize-local-initiatives",
+    "society": "Signal Processing Society",
+    "notes": "SPS's MDI program: up to $3,500 (in-person/hybrid) or $2,500 (virtual) for chapter-run seasonal schools, forums, and regional events."
+  },
+  {
+    "name": "IEEE SPS - Chapter Resources",
+    "url": "https://signalprocessingsociety.org/volunteers/chapter-resources",
+    "society": "Signal Processing Society",
+    "notes": "Covers 4 distinct SPS chapter funding lines in one page: Speaker Expenses ($3,500), Additional/coffee-break Chapter Support ($500), Student Branch Chapter Support ($500), and the Student Branch Chapter Growth Reward ($25/new member, up to $250)."
+  },
+  {
+    "name": "IEEE SPS Day - Photo Contest",
+    "url": "https://spsday.ieee.org/contests/",
+    "society": "Signal Processing Society",
+    "notes": "Annual (2 June) SPS Day chapter photo contest - winning chapter gets $250 in additional chapter funding."
+  },
+  {
+    "name": "IEEE Power & Energy Society - Awards and Scholarships",
+    "url": "https://ieee-pes.org/about-pes/awards-scholarships/",
+    "society": "Power & Energy Society",
+    "notes": "PES's own awards/scholarships hub (Scholarship Plus, Outstanding Student Scholarship, memorial scholarships, etc)."
+  },
+  {
+    "name": "IEEE Communications Society - Awards",
+    "url": "https://www.comsoc.org/engagement-community/awards",
+    "society": "Communications Society",
+    "notes": "ComSoc career/service awards plus education and STEM grant programs."
+  },
+  {
+    "name": "IEEE Computer Society - Emerging Technology Grants",
+    "url": "https://www.computer.org/communities/emerging-technology-fund",
+    "society": "Computer Society",
+    "notes": "Up to $50,000 for innovative CS projects/programs/activities not otherwise covered. Deadline 15 June 2026."
+  },
+  {
+    "name": "IEEE CS TCSE - Broadening Participation",
+    "url": "https://tc.computer.org/tcse/broadening-participation/",
+    "society": "Computer Society",
+    "notes": "Technical Council on Software Engineering's community broadening-participation grants ($1,500-$5,000 based on past awardees). 2026 call deadline 15 May."
+  },
+  {
+    "name": "IEEE Computer Society - Broadening Participation Fund",
+    "url": "https://www.computer.org/about/humanitarian-impact/broaden-participation",
+    "society": "Computer Society",
+    "notes": "CS-wide (not TCSE-specific) broadening-participation grants, $5,000-$15,000 range. Deadline 3 August 2026."
+  },
+  {
+    "name": "IEEE Computer Society - Chapter Funding",
+    "url": "https://www.computer.org/communities/professional-chapters/resources/funding/",
+    "society": "Computer Society",
+    "notes": "Chapter Grants (Small up to $500, Medium $500-$1,000, Large $1,000-$2,000), plus Core Funding ($200 match) and Incentive Funding ($650/$300) for top-performing chapters. This is CS's version of the '$500 growth funding' - it's tiered by grant size, not a single named 'growth' program."
+  }
+]
