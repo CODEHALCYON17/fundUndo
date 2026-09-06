@@ -1,8 +1,27 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import type { Opportunity } from "./types.js";
 
 const SITE_DIR = path.join(process.cwd(), "docs");
+const META_PATH = path.join(process.cwd(), "data", "site-meta.json");
+
+interface SiteMeta {
+  lastCount: number;
+  lastGeneratedAt: string;
+}
+
+async function loadSiteMeta(): Promise<SiteMeta | null> {
+  try {
+    return JSON.parse(await readFile(META_PATH, "utf-8")) as SiteMeta;
+  } catch {
+    return null;
+  }
+}
+
+async function saveSiteMeta(meta: SiteMeta): Promise<void> {
+  await mkdir(path.dirname(META_PATH), { recursive: true });
+  await writeFile(META_PATH, JSON.stringify(meta, null, 2), "utf-8");
+}
 
 /** Visual identity per society/board group. Add an entry here whenever a new
  * `society` value shows up in sources.json, or it'll fall back to a generic
@@ -282,8 +301,35 @@ ${sections}
 `;
 }
 
-export async function writeSiteHtml(opportunities: Opportunity[]): Promise<void> {
+export interface PublishResult {
+  published: boolean;
+  reason?: string;
+}
+
+/**
+ * Regenerates docs/index.html from the current opportunity list - but only if
+ * this run looks healthy enough to trust. A badly rate-limited or mostly-failed
+ * run could otherwise overwrite a good, complete site with a near-empty one.
+ * If this run found nothing, or found far fewer opportunities than last time
+ * (more than a 50% drop), the last published site is left untouched instead.
+ */
+export async function writeSiteHtml(opportunities: Opportunity[]): Promise<PublishResult> {
+  const count = opportunities.length;
+  const meta = await loadSiteMeta();
+
+  if (count === 0) {
+    return { published: false, reason: "0 opportunities extracted this run - keeping the last published site." };
+  }
+  if (meta && count < meta.lastCount * 0.5) {
+    return {
+      published: false,
+      reason: `Only ${count} opportunities this run, down from ${meta.lastCount} last time (>50% drop, likely a bad/rate-limited run) - keeping the last published site.`,
+    };
+  }
+
   await mkdir(SITE_DIR, { recursive: true });
   const html = buildSiteHtml(opportunities, new Date());
   await writeFile(path.join(SITE_DIR, "index.html"), html, "utf-8");
+  await saveSiteMeta({ lastCount: count, lastGeneratedAt: new Date().toISOString() });
+  return { published: true };
 }

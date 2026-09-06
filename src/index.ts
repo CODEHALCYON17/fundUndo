@@ -72,11 +72,18 @@ async function main() {
     return;
   }
 
-  // Real run: always regenerate the site from the full current picture,
+  // Real run: try to regenerate the site from the full current picture,
   // whether or not anything is new/changed since last time - the site
   // should always reflect everything that's currently open, not just deltas.
-  await writeSiteHtml(allOpportunities);
-  console.log(`Site regenerated at docs/index.html (${allOpportunities.length} total open opportunities).`);
+  // writeSiteHtml itself refuses to publish a suspiciously empty/degraded
+  // run over a known-good site (see site.ts) - a bad rate-limited day should
+  // never take the live site down, just skip that day's update.
+  const siteResult = await writeSiteHtml(allOpportunities);
+  if (siteResult.published) {
+    console.log(`Site regenerated at docs/index.html (${allOpportunities.length} total open opportunities).`);
+  } else {
+    console.warn(`Site NOT updated this run: ${siteResult.reason}`);
+  }
 
   if (changes.length === 0) {
     console.log("Nothing new/changed - no digest email sent.");
