@@ -1,0 +1,7 @@
+[build]
+  # This is not a frontend-framework project - docs/index.html is generated
+  # locally by scripts/publish.sh (which runs the Node pipeline, then commits
+  # and pushes docs/) before Netlify ever sees a new commit. Netlify's only
+  # job is to serve that pre-built directory - there's nothing for it to build.
+  publish = "docs"
+  command = "echo 'Nothing to build - docs/ is pre-generated locally by scripts/publish.sh'"
