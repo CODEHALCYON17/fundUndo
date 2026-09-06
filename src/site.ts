@@ -179,6 +179,17 @@ export function buildSiteHtml(opportunities: Opportunity[], generatedAt: Date): 
     })
     .join("");
 
+  // Mobile-only alternative to the chip row - a native <select> reads better
+  // and takes far less vertical space than a wrapped row of 9+ buttons on a
+  // phone. Swapped in via CSS (.fu-chip-row / .fu-filter-select) at the
+  // existing 820px breakpoint; driven by the same applyFilters() as the chips.
+  const selectOptions = societies
+    .map((s) => {
+      const meta = SOCIETY_META[s] || DEFAULT_META;
+      return `<option value="${escapeAttr(meta.tag)}">${escapeHtml(s)}</option>`;
+    })
+    .join("");
+
   const sections = societies.map((s, i) => sectionHtml(s, groups.get(s)!, i)).join("");
 
   const total = opportunities.length;
@@ -208,12 +219,16 @@ export function buildSiteHtml(opportunities: Opportunity[], generatedAt: Date): 
   .fu-chip.fu-active { background: oklch(66% 0.18 42) !important; color: white !important; border-color: oklch(66% 0.18 42) !important; }
   .fu-chip.fu-active span { background: white !important; }
   [hidden] { display: none !important; }
+  .fu-filter-select { display: none; }
   @media (max-width: 820px) {
     .fu-header, .fu-statsbar, .fu-hero, .fu-sections, .fu-tracked, .fu-footer { padding-left: 24px !important; padding-right: 24px !important; }
     .fu-hero h1 { font-size: 28px !important; }
     .fu-hero { padding-top: 32px !important; padding-bottom: 24px !important; }
     .fu-index-num { font-size: 56px !important; top: -20px !important; }
     .fu-chip { padding-top: 8px !important; padding-bottom: 8px !important; }
+    .fu-chip-row { display: none !important; }
+    .fu-filter-select { display: block !important; width: 100%; }
+    .fu-statsbar { flex-direction: column; align-items: stretch !important; }
   }
   @media (max-width: 480px) {
     .fu-header, .fu-statsbar, .fu-hero, .fu-sections, .fu-tracked, .fu-footer { padding-left: 16px !important; padding-right: 16px !important; }
@@ -256,10 +271,14 @@ export function buildSiteHtml(opportunities: Opportunity[], generatedAt: Date): 
     <span style="color:oklch(80% 0.01 70);">·</span>
     <span style="font-weight:700; color:oklch(19% 0.025 50);">${total} open opportunities</span>
   </div>
-  <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap;">
+  <div class="fu-chip-row" style="display:flex; align-items:center; gap:7px; flex-wrap:wrap;">
     <button class="fu-chip fu-active" data-filter="ALL" style="padding:6px 15px; border-radius:8px; font-size:13px; font-weight:700; border:1.5px solid oklch(88% 0.02 75); cursor:pointer; font-family:'Karla', sans-serif;">All</button>
     ${chips}
   </div>
+  <select id="fu-filter-select" class="fu-filter-select" style="height:40px; border-radius:8px; border:1.5px solid oklch(88% 0.02 75); background:white; font-size:13px; font-weight:600; color:oklch(42% 0.025 55); font-family:'Karla', sans-serif; padding:0 10px;">
+    <option value="ALL" selected>All societies</option>
+    ${selectOptions}
+  </select>
 </div>
 
 <div class="fu-hero" style="padding:48px 64px 32px 64px; position:relative;">
@@ -279,6 +298,7 @@ ${sections}
 <script>
 (function () {
   var search = document.getElementById('fu-search');
+  var select = document.getElementById('fu-filter-select');
   var chips = Array.prototype.slice.call(document.querySelectorAll('.fu-chip'));
   var sections = Array.prototype.slice.call(document.querySelectorAll('.fu-section'));
   var activeFilter = 'ALL';
@@ -299,14 +319,22 @@ ${sections}
     });
   }
 
+  // Chips (desktop/tablet) and the <select> (phone - see the 820px
+  // breakpoint) both drive the same activeFilter, kept in sync so either
+  // control reflects reality if the viewport is resized across the
+  // breakpoint without a reload.
+  function setFilter(tag) {
+    activeFilter = tag;
+    chips.forEach(function (c) { c.classList.toggle('fu-active', c.getAttribute('data-filter') === tag); });
+    if (select.value !== tag) select.value = tag;
+    applyFilters();
+  }
+
   chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      chips.forEach(function (c) { c.classList.remove('fu-active'); });
-      chip.classList.add('fu-active');
-      activeFilter = chip.getAttribute('data-filter');
-      applyFilters();
-    });
+    chip.addEventListener('click', function () { setFilter(chip.getAttribute('data-filter')); });
   });
+
+  select.addEventListener('change', function () { setFilter(select.value); });
 
   search.addEventListener('input', applyFilters);
 })();

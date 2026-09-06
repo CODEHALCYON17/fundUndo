@@ -18,12 +18,16 @@
   .fu-chip.fu-active { background: oklch(66% 0.18 42) !important; color: white !important; border-color: oklch(66% 0.18 42) !important; }
   .fu-chip.fu-active span { background: white !important; }
   [hidden] { display: none !important; }
+  .fu-filter-select { display: none; }
   @media (max-width: 820px) {
     .fu-header, .fu-statsbar, .fu-hero, .fu-sections, .fu-tracked, .fu-footer { padding-left: 24px !important; padding-right: 24px !important; }
     .fu-hero h1 { font-size: 28px !important; }
     .fu-hero { padding-top: 32px !important; padding-bottom: 24px !important; }
     .fu-index-num { font-size: 56px !important; top: -20px !important; }
     .fu-chip { padding-top: 8px !important; padding-bottom: 8px !important; }
+    .fu-chip-row { display: none !important; }
+    .fu-filter-select { display: block !important; width: 100%; }
+    .fu-statsbar { flex-direction: column; align-items: stretch !important; }
   }
   @media (max-width: 480px) {
     .fu-header, .fu-statsbar, .fu-hero, .fu-sections, .fu-tracked, .fu-footer { padding-left: 16px !important; padding-right: 16px !important; }
@@ -62,14 +66,18 @@
 <div class="fu-statsbar" style="min-height:60px; background:oklch(98% 0.012 85); border-bottom:1px solid oklch(88% 0.02 75); display:flex; align-items:center; justify-content:space-between; padding:12px 64px; flex-wrap:wrap; gap:12px;">
   <div style="font-size:13px; color:oklch(42% 0.025 55); display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
     <span style="position:relative; display:inline-flex; width:7px; height:7px; border-radius:50%; background:oklch(70% 0.16 145);"></span>
-    <span>Checked Sep 6, 2026, 12:56 PM UTC</span>
+    <span>Checked Sep 6, 2026, 1:14 PM UTC</span>
     <span style="color:oklch(80% 0.01 70);">·</span>
     <span style="font-weight:700; color:oklch(19% 0.025 50);">35 open opportunities</span>
   </div>
-  <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap;">
+  <div class="fu-chip-row" style="display:flex; align-items:center; gap:7px; flex-wrap:wrap;">
     <button class="fu-chip fu-active" data-filter="ALL" style="padding:6px 15px; border-radius:8px; font-size:13px; font-weight:700; border:1.5px solid oklch(88% 0.02 75); cursor:pointer; font-family:'Karla', sans-serif;">All</button>
     <button class="fu-chip" data-filter="FOUNDATION" style="padding:6px 13px; border-radius:8px; border:1.5px solid oklch(88% 0.02 75); font-size:13px; font-weight:600; color:oklch(42% 0.025 55); display:flex; align-items:center; gap:6px; background:white; cursor:pointer; font-family:'Karla', sans-serif;"><span style="width:7px; height:7px; border-radius:50%; background:oklch(58% 0.15 250); flex-shrink:0;"></span>FOUNDATION</button><button class="fu-chip" data-filter="HTB" style="padding:6px 13px; border-radius:8px; border:1.5px solid oklch(88% 0.02 75); font-size:13px; font-weight:600; color:oklch(42% 0.025 55); display:flex; align-items:center; gap:6px; background:white; cursor:pointer; font-family:'Karla', sans-serif;"><span style="width:7px; height:7px; border-radius:50%; background:oklch(58% 0.15 150); flex-shrink:0;"></span>HTB</button><button class="fu-chip" data-filter="SPS" style="padding:6px 13px; border-radius:8px; border:1.5px solid oklch(88% 0.02 75); font-size:13px; font-weight:600; color:oklch(42% 0.025 55); display:flex; align-items:center; gap:6px; background:white; cursor:pointer; font-family:'Karla', sans-serif;"><span style="width:7px; height:7px; border-radius:50%; background:oklch(58% 0.15 300); flex-shrink:0;"></span>SPS</button><button class="fu-chip" data-filter="RAS" style="padding:6px 13px; border-radius:8px; border:1.5px solid oklch(88% 0.02 75); font-size:13px; font-weight:600; color:oklch(42% 0.025 55); display:flex; align-items:center; gap:6px; background:white; cursor:pointer; font-family:'Karla', sans-serif;"><span style="width:7px; height:7px; border-radius:50%; background:oklch(58% 0.15 65); flex-shrink:0;"></span>RAS</button><button class="fu-chip" data-filter="AP-S" style="padding:6px 13px; border-radius:8px; border:1.5px solid oklch(88% 0.02 75); font-size:13px; font-weight:600; color:oklch(42% 0.025 55); display:flex; align-items:center; gap:6px; background:white; cursor:pointer; font-family:'Karla', sans-serif;"><span style="width:7px; height:7px; border-radius:50%; background:oklch(58% 0.15 20); flex-shrink:0;"></span>AP-S</button><button class="fu-chip" data-filter="CS" style="padding:6px 13px; border-radius:8px; border:1.5px solid oklch(88% 0.02 75); font-size:13px; font-weight:600; color:oklch(42% 0.025 55); display:flex; align-items:center; gap:6px; background:white; cursor:pointer; font-family:'Karla', sans-serif;"><span style="width:7px; height:7px; border-radius:50%; background:oklch(58% 0.15 335); flex-shrink:0;"></span>CS</button>
   </div>
+  <select id="fu-filter-select" class="fu-filter-select" style="height:40px; border-radius:8px; border:1.5px solid oklch(88% 0.02 75); background:white; font-size:13px; font-weight:600; color:oklch(42% 0.025 55); font-family:'Karla', sans-serif; padding:0 10px;">
+    <option value="ALL" selected>All societies</option>
+    <option value="FOUNDATION">IEEE Foundation</option><option value="HTB">Humanitarian Technologies Board</option><option value="SPS">Signal Processing Society</option><option value="RAS">Robotics &amp; Automation Society</option><option value="AP-S">Antennas &amp; Propagation Society</option><option value="CS">Computer Society</option>
+  </select>
 </div>
 
 <div class="fu-hero" style="padding:48px 64px 32px 64px; position:relative;">
@@ -628,6 +636,7 @@
 <script>
 (function () {
   var search = document.getElementById('fu-search');
+  var select = document.getElementById('fu-filter-select');
   var chips = Array.prototype.slice.call(document.querySelectorAll('.fu-chip'));
   var sections = Array.prototype.slice.call(document.querySelectorAll('.fu-section'));
   var activeFilter = 'ALL';
@@ -648,14 +657,22 @@
     });
   }
 
+  // Chips (desktop/tablet) and the <select> (phone - see the 820px
+  // breakpoint) both drive the same activeFilter, kept in sync so either
+  // control reflects reality if the viewport is resized across the
+  // breakpoint without a reload.
+  function setFilter(tag) {
+    activeFilter = tag;
+    chips.forEach(function (c) { c.classList.toggle('fu-active', c.getAttribute('data-filter') === tag); });
+    if (select.value !== tag) select.value = tag;
+    applyFilters();
+  }
+
   chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      chips.forEach(function (c) { c.classList.remove('fu-active'); });
-      chip.classList.add('fu-active');
-      activeFilter = chip.getAttribute('data-filter');
-      applyFilters();
-    });
+    chip.addEventListener('click', function () { setFilter(chip.getAttribute('data-filter')); });
   });
+
+  select.addEventListener('change', function () { setFilter(select.value); });
 
   search.addEventListener('input', applyFilters);
 })();
