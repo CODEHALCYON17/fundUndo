@@ -109,19 +109,29 @@ personal access token, set as this repo's `core.sshCommand`.
 sources.json → fetch each page (fetcher.ts)
              → strip to text + links
              → LLM extracts structured opportunities (extractor.ts)
+             → follow each opportunity's own link to fill in any amount/deadline
+               still missing (enrichMissingFields in index.ts), capped per run
+               via MAX_ENRICHMENT_FETCHES (default 40)
              → diff against data/seen.json (store.ts) → email digest (digest.ts, mailer.ts)
              → regenerate docs/index.html from the full current set (site.ts)
              → save updated seen-state
 ```
 
-`data/seen.json` is the dedupe store (gitignored) — delete it to force
-everything to be reported as "new" again. It's unrelated to the site
-generator, which always uses the fresh, complete list from this run.
+`data/seen.json` is the dedupe store — tracked in git (not gitignored),
+since GitHub Actions runs from a clean checkout each time and needs this
+state to persist between scheduled runs. Delete it locally to force
+everything to be reported as "new" again.
 
 ## Notes / limitations
 
 - Pages that require JavaScript to render their content won't work with the
-  plain `fetch` used here — if a source you add returns near-empty text,
-  it likely needs a headless browser (not included in this v1).
+  plain `fetch` used here — if a source (or an opportunity's own linked page,
+  for the enrichment step above) returns near-empty text, it likely needs a
+  headless browser (not included in this v1). Some IEEE application portals
+  (e.g. WizeHive-hosted ones) are JS-rendered and will stay "Not specified"
+  for this reason even after the enrichment pass.
+- A backlog of missing amounts/deadlines works down gradually, at most
+  `MAX_ENRICHMENT_FETCHES` per run — expect it to take a few runs to fully
+  catch up after adding a lot of new sources at once.
 - Extraction quality depends on the LLM reading the page correctly; spot-check
   a `--dry-run` after adding a new source before trusting it unattended.

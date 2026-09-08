@@ -163,3 +163,54 @@ Respond with ONLY a JSON array of objects with exactly these keys: title, amount
     return [];
   }
 }
+
+export interface EnrichedFields {
+  amount: string;
+  deadline: string;
+}
+
+/**
+ * Many opportunities come from an overview/index page (e.g. a society's
+ * scholarship directory, or a summary page linking to each grant's own
+ * "apply here" page) that names the program but doesn't restate its amount
+ * or deadline - those live on the linked page instead. This does one
+ * focused, narrow extraction pass grounded in THAT linked page, for a
+ * single named opportunity, asking only for what's still missing.
+ */
+export async function enrichOpportunity(
+  title: string,
+  page: FetchedPage,
+  missing: { amount: boolean; deadline: boolean }
+): Promise<EnrichedFields> {
+  const fields = [missing.amount && "amount", missing.deadline && "deadline"].filter(Boolean).join(" and ");
+
+  const prompt = `You are looking for specific details about ONE named funding opportunity on this page: "${title}"
+
+PAGE TEXT:
+"""
+${page.text.slice(0, 8000)}
+"""
+
+Find the ${fields} for "${title}" specifically, as stated on this page. If this page is a generic application portal/form with no page-specific text, or the ${fields} genuinely isn't stated anywhere on this page, use "Not specified" for that field - do not guess or infer a value that isn't actually written on the page.
+
+Respond with ONLY a JSON object with exactly these keys: amount, deadline. No markdown fences, no commentary. Example: {"amount": "$5,000", "deadline": "15 March 2026"}`;
+
+  const content = await chatComplete(prompt);
+  let raw = content.trim().replace(/^```(json)?/i, "").replace(/```$/, "").trim();
+  const start = raw.indexOf("{");
+  const end = raw.lastIndexOf("}");
+  if (start !== -1 && end !== -1 && end > start) {
+    raw = raw.slice(start, end + 1);
+  }
+
+  try {
+    const parsed = JSON.parse(raw);
+    return {
+      amount: typeof parsed.amount === "string" ? parsed.amount : "Not specified",
+      deadline: typeof parsed.deadline === "string" ? parsed.deadline : "Not specified",
+    };
+  } catch (err) {
+    console.error(`Failed to parse enrichment JSON for "${title}":`, err);
+    return { amount: "Not specified", deadline: "Not specified" };
+  }
+}
