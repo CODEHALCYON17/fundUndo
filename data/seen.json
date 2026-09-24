@@ -15,7 +15,7 @@
     "title": "IEEE Communication for All grant program",
     "amount": "US$1,000 - US$12,000",
     "deadline": "26 July 2026",
-    "summary": "Funding for grassroots connectivity projects led by IEEE members that address local digital divide gaps, with a focus on SDG9 and other social impact goals."
+    "summary": "Funding for grassroots connectivity projects led by IEEE members that address local digital divide gaps, with a focus on SDG9 and other SDGs. Up to eight projects will be funded for up to six months of implementation."
   },
   "41f743b0c14409c61dbac9e4e8451005a78b8fdc": {
     "title": "IEEE Electron Devices Society & Tech4Good Call for Proposals",
@@ -45,7 +45,7 @@
     "title": "IEEE AP-S Tech for Impact Challenge",
     "amount": "up to US$25,000",
     "deadline": "23 August 2026",
-    "summary": "Teams of 3–8 IEEE AP‑S members can apply to receive a grant of up to US$25,000 to develop and implement antenna and propagation solutions that enable connectivity for effective disaster response, aligned with UN SDG 9 or SDG 13."
+    "summary": "Teams of 3–8 IEEE AP‑S members can apply to receive up to $25,000 to implement a solution that enables connectivity for effective disaster response, aligned with UN SDG 9 or 13."
   },
   "09088a4ebb3e0ea0a82748783a384003d9bc478a": {
     "title": "IEEE AP-S Undergraduate Summer Research Scholarship (USRS)",
@@ -69,13 +69,13 @@
     "title": "IEEE Antennas and Propagation Society Fellowship",
     "amount": "US$5,000",
     "deadline": "August 30, 2026",
-    "summary": "Provides fellowship support to graduate students and postdoctoral fellows worldwide to pursue research projects in antenna and propagation areas, emphasizing diversity."
+    "summary": "Provides fellowship funding to graduate students and postdoctoral fellows worldwide to support research projects in antenna and propagation areas, with a total program budget of $240,000."
   },
   "6adcb5f48dbeac0b59d8bc5b7f53154e698fabeb": {
     "title": "IEEE Leopold B. Felsen Research Grant for Electromagnetics",
     "amount": "$5,000",
     "deadline": "August 30, 2026",
-    "summary": "Grants $5,000 and a plaque to a promising young professional to conduct fundamental electromagnetics research."
+    "summary": "Grants $5,000 to a promising young professional to conduct a research project on fundamental aspects of electromagnetics."
   },
   "0ae08ed87708a88c8d5563d8eeec29367af68c27": {
     "title": "IEEE AP-S Mojgan Daneshmand Grant for Women",
@@ -87,7 +87,7 @@
     "title": "IEEE AP-S Educational Initiatives Program",
     "amount": "$5,000",
     "deadline": "July 3, 2026",
-    "summary": "Grants up to $5,000 for developing educational resources in antennas, propagation, and electromagnetics for educators, students, and the public."
+    "summary": "Provides grants of up to $5,000 to develop educational resources in electromagnetics, propagation, and antennas for educators, students, and the public."
   },
   "121af6c3f576bb6c2ee06b8b9665c62b8fab3924": {
     "title": "IEEE AP-S C.J. Reddy Travel Grant for Graduate Students",
@@ -207,25 +207,25 @@
     "title": "WEIGD Student Support Fund",
     "amount": "Up to US $4,000 per year",
     "deadline": "Not specified",
-    "summary": "Provides up to $4,000 of IEEE Computer Society membership dues each year for students pursuing a computer science career."
+    "summary": "Covers up to $4,000 of IEEE Computer Society membership dues each year for students pursuing a computer science career."
   },
   "2c3f070d14a29957ea6d13e03ff0f5d522788d20": {
     "title": "IEEE Foundation Funding Request",
     "amount": "$5,000-$50,000",
     "deadline": "Not specified",
-    "summary": "Funding for IEEE organizational units (regions, sections, societies, chapters, affinity groups, student branches, programs, committees, boards) to support new or existing projects that improve access to technology, enhance technological literacy, or support technology education."
+    "summary": "General grant program for IEEE organizational units to fund new or existing projects, workshops, and initiatives that improve access to technology, education, or societal impact."
   },
   "726aaff2c133c65a80bf60296b31d8e3f5608490": {
     "title": "IEEE Young Professionals Event Funding",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Funding for local Young Professionals events organized by IEEE chapters or sections."
+    "summary": "Funding for Young Professionals events organized by IEEE sections, chapters, or societies."
   },
   "9dda91b95a7625dee3f8bff7d7849c28db9c5d7b": {
     "title": "IEEE Students SPAx Events",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Funding for student‑led SPAx (Student Professional Awareness) events that promote technology education and engagement among IEEE student members."
+    "summary": "Funding for student‑led SPAx (Student Professional Awareness) events that promote technology education and outreach."
   },
   "e22e48838afb21da45640e55d0d3221d991dc24e": {
     "title": "Scholarships",
@@ -243,13 +243,13 @@
     "title": "Fellowships",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "IEEE Student members can connect with fellow members and access fellowship opportunities through the IEEE Students network."
+    "summary": "IEEE Student members can connect with fellow members and access fellowship opportunities for networking and professional growth."
   },
   "b91038bf65963f8bcdf1321b5715405618906a34": {
     "title": "IEEE AP-S Eugene F. Knott Memorial Pre‑Doctoral Research Grants",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Supports pre‑doctoral students conducting research under a faculty member who is an IEEE AP‑S member, in electromagnetics or related fields at an accredited institution."
+    "summary": "Supports pre‑doctoral students conducting research under a faculty member who is an IEEE AP‑S member at an accredited institution."
   },
   "42207efe42d26b4e48eeb23ec0a0c680c62137a6": {
     "title": "IEEE AP‑S Doctoral Research Grants",
@@ -261,7 +261,7 @@
     "title": "IEEE Antennas and Propagation Society Mojgan Daneshmand Grant for Women",
     "amount": "$1,500",
     "deadline": "20 March 2026",
-    "summary": "Offers up to 12 grants of $1,500 each annually to women researchers, covering the grant amount, symposium registration, and banquet ticket."
+    "summary": "Offers up to 12 grants of $1,500 each annually to women researchers, covering the grant amount, symposium registration fee, and banquet ticket."
   },
   "b1b34de76bd59d00a7d863cb220f46ed760e8260": {
     "title": "IEEE AP‑S Educational Initiatives Program",
@@ -271,7 +271,7 @@
   },
   "a6272caefa60d36af5c4f8e49d58f8636292506b": {
     "title": "IEEE Tech4Good Project Grants",
-    "amount": "$2,500 - $10,000 per project",
+    "amount": "$2,500-$10,000 per project",
     "deadline": "Letter of Intent deadline: 15 March 2026",
     "summary": "Grants for IEEE member teams to implement community‑focused technology projects that address UN Sustainable Development Goals. Teams must partner with a local organization and submit a Letter of Intent followed by a full application."
   },
@@ -279,7 +279,7 @@
     "title": "IEEE Region 8 & Tech4Good Tech Catalyst Program 2026",
     "amount": "$1,000-$5,000 per project",
     "deadline": "13 July 2026 (Letter of Intent deadline)",
-    "summary": "Project grants for SIGHT Groups in IEEE Region 8 to implement technological solutions to sustainable development challenges, with funding up to six months of implementation."
+    "summary": "Project grants for SIGHT Groups in IEEE Region 8 to implement technological solutions to sustainable development challenges, with funding up to six months of project work."
   },
   "431b2ec69cbb1f58c5cd0e3e0ebac6de6ea77226": {
     "title": "Gold Sponsorship Tier",
@@ -291,7 +291,7 @@
     "title": "Silver Sponsorship Tier",
     "amount": "Up to US$2,500",
     "deadline": "Not specified",
-    "summary": "Provides up to $2,500 for a humanitarian technology event, including a breakout/plenary session, branding, and a complimentary registration."
+    "summary": "Provides up to $2,500 for a humanitarian technology event, covering a breakout/plenary session, branding, and a complimentary registration."
   },
   "28ef95a5d7a931306fbebcd5913a46404d14571a": {
     "title": "IEEE Signal Processing Society (SPS) Scholarship Program",
@@ -301,57 +301,57 @@
   },
   "ebc4da2653d2ac5f591d88b00e601cc3a52b784d": {
     "title": "IEEE ICASSP Conference Travel Grant",
-    "amount": "Typically up to US$750 (or up to US$1500 for applicants from regions other than the conference region)",
+    "amount": "Typically up to US$750 (same region) or up to US$1500 (other regions)",
     "deadline": "Not specified",
-    "summary": "Provides reimbursement for travel expenses (airfare, accommodations, transit) for SPS members with an accepted paper to attend the ICASSP conference in person."
+    "summary": "Provides reimbursement for travel expenses (airfare, accommodation, transit) for SPS members with an accepted paper to attend the ICASSP conference in person."
   },
   "f98a24194cd69c1b1e0fb0e53e3ab97fbe126ea2": {
     "title": "IEEE ICIP Conference Travel Grant",
-    "amount": "Typically up to US$750 (or up to US$1500 for applicants from regions other than the conference region)",
+    "amount": "Typically up to US$750 (same region) or up to US$1500 (other regions)",
     "deadline": "Not specified",
     "summary": "Offers reimbursement for travel costs for SPS members who have an accepted paper and will present it in person at the ICIP conference."
   },
   "74011e2cb6f195863b6a732a0f6bf0195eed5214": {
     "title": "Travel Grants for Practicing Engineers",
-    "amount": "Typically up to US$750 (or up to US$1500 depending on region)",
+    "amount": "Typically up to US$750 or US$1500, may vary",
     "deadline": "Not specified",
-    "summary": "Supports practicing engineers who are SPS members to attend the ICASSP or ICIP conferences, covering travel-related expenses."
+    "summary": "Supports practicing engineers who are SPS members to attend ICASSP or ICIP conferences, covering travel-related expenses."
   },
   "d23864b358ed64563d7080c322b14e6e62fd04a4": {
     "title": "Certified Chapter Student Travel Grants",
-    "amount": "Typically up to US$750 (or up to US$1500 depending on region)",
+    "amount": "Typically up to US$750 or US$1500, may vary",
     "deadline": "Not specified",
     "summary": "Provides travel assistance to SPS student members with accepted papers to attend ICASSP or ICIP conferences."
   },
   "074c24d6a3a96f206bf51eb316b919e83cc580b7": {
     "title": "ICASSP and ICIP Student Travel Grants",
-    "amount": "Typically up to US$750 (or up to US$1500 depending on region)",
+    "amount": "Typically up to US$750 or US$1500, may vary",
     "deadline": "Not specified",
     "summary": "Offers travel funding for student authors who are SPS members with accepted papers to present at ICASSP or ICIP conferences."
   },
   "8634a9504c53050a2a6d986b95032658fbd8fe70": {
     "title": "Richard E. Merwin Scholarship",
-    "amount": "$1,000",
-    "deadline": "30 April and 30 September",
+    "amount": "Not specified",
+    "deadline": "Not specified",
     "summary": "Rewards active student volunteer leaders in IEEE Computer Society student branches or chapters who show promise in their academic and professional efforts."
   },
   "330076016b7a4be8b8f1ececba90d50bdd39d8d6": {
     "title": "Lance Stafford Larson Paper Contest",
-    "amount": "$500",
-    "deadline": "31 October",
+    "amount": "Not specified",
+    "deadline": "Not specified",
     "summary": "Encourages students to develop excellence in their communication skills and achievement in the field of computer science through a paper competition."
   },
   "4d5048862b120baf83eaba4221f572f0f73daae3": {
     "title": "WEIGD Student Support Fund",
-    "amount": "$4,000",
-    "deadline": "15 July 2026",
-    "summary": "Provides up to US$4,000 worth of IEEE Computer Society memberships annually to support student members."
+    "amount": "$4,000 worth of IEEE Computer Society memberships annually",
+    "deadline": "Not specified",
+    "summary": "Provides funding to cover the cost of IEEE Computer Society memberships for eligible students each year."
   },
   "4c0bba259ecd8dad9553ec655677fa7a94f4aabf": {
     "title": "Student Transition and Elevation Partnership (STEP) Funding",
     "amount": "Maximum award is US$500",
     "deadline": "Not specified",
-    "summary": "Provides up to $500 for events that unite IEEE Young Professionals and IEEE Students to facilitate the transition from student to young professional and showcase IEEE membership benefits."
+    "summary": "Provides up to $500 for events that unite IEEE Young Professionals and IEEE Students to facilitate the transition from student to young professional, showcasing membership benefits and YP services."
   },
   "cb819e1a373b689c9dba0e4623fe173a2728fc48": {
     "title": "Local Activity Funding",
@@ -363,7 +363,7 @@
     "title": "Meet-up Funding",
     "amount": "Maximum award is US$1,500",
     "deadline": "Not specified",
-    "summary": "Provides up to $1,500 to support IEEE members in a shared geographical area to organize networking meet‑ups, often co‑located with larger events."
+    "summary": "Grants up to $1,500 for IEEE members in a shared geographic area to host networking meet‑ups, often co‑located with larger events, to foster collaboration and professional relationships."
   },
   "5f8a98f3ca0f92c0789478dea08afca8dc08b57d": {
     "title": "IEEE RAS Member Support Program",
@@ -393,30 +393,30 @@
     "title": "Seasonal Schools in Signal Processing (S3P)",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Provides funding for in‑person or hybrid seasonal school events that give attendees specialized background in selected signal‑processing topics through tutorials and applications."
+    "summary": "Funding for seasonal schools that provide specialized background in select signal‑processing topics through virtual tutorials and applications, targeting SPS members and students."
   },
   "f9a6b3d9cafcde3ccc47acdb8608ab9190434f65": {
     "title": "Forums",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Funds networking events with industry‑focused topics, including panel sessions, presentations, or lectures by industry experts; content must be based on industry interest and cannot include papers for publication."
+    "summary": "Funding for networking events with industry‑focused panels, presentations or lectures, designed for industry members and cannot include papers for publication."
   },
   "78f3066641ce745a1a4680425b55a14ed06e6788": {
     "title": "Regional Meetings",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Supports local high‑quality technical events such as workshops or small conferences that serve the regional community and target themes of interest to SPS members."
+    "summary": "Funding for local high‑quality technical events such as workshops or small conferences that serve the regional SPS community and may include conference paper publications."
   },
   "3c3153fb03b7da0370d9af67c10d605820a47ed4": {
     "title": "Chapter Initiatives",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Provides funding for chapter‑submitted interactive events, including specialized technical sessions, industry executive meetings, outreach to primary‑school students, design competitions, and other ideas."
+    "summary": "Funding for chapter‑submitted interactive events, including specialized technical sessions, industry executive meetings, outreach to primary‑school students, design competitions, and other ideas."
   },
   "b70416795270cfd31148f99290a30a7a2ba89891": {
     "title": "Member Driven Initiatives (MDI) Funding",
     "amount": "Up to US$3,500 for in‑person or hybrid events; up to US$2,500 for virtual events",
-    "deadline": "Cycle 1 proposals typically due January; Cycle 2 proposals typically due June",
+    "deadline": "Not specified (semi‑annual cycles; Cycle 1 proposals typically due January, Cycle 2 proposals typically due June)",
     "summary": "General funding program for SPS members and chapters to support volunteer‑driven local activities, including seasonal schools, forums, regional meetings, and chapter initiatives."
   },
   "dcaba692f167d8646e4bbbe4b310e13849c4365b": {
@@ -429,25 +429,25 @@
     "title": "Additional Chapter Support",
     "amount": "$500 per SPS Chapter annually",
     "deadline": "Not specified",
-    "summary": "Offers up to $500 per year for coffee breaks and small social gatherings associated with chapter meetings, reimbursed after pre‑approval."
+    "summary": "Offers up to $500 per chapter each year for coffee breaks and other small social gatherings associated with meetings, reimbursed after pre‑approval."
   },
   "1f7d0da275acec328421c4c37a7601dc4d0ad000": {
     "title": "Student Branch Chapter Support",
     "amount": "$500 annually per Student Branch Chapter",
     "deadline": "Not specified",
-    "summary": "Provides $500 each year to help Student Branch Chapters fund invited speakers, career‑development activities, social functions, and similar events, with funds provided up‑front upon proposal approval."
+    "summary": "Provides $500 each year to Student Branch Chapters for invited speakers, career‑development activities, social functions, and similar events, funded up‑front upon proposal approval."
   },
   "0f0a26e55c04dfa0b5a48d81caa030f3e587146c": {
     "title": "Student Branch Chapter Growth Reward",
     "amount": "$25 per new member, up to $250 annually",
     "deadline": "Not specified",
-    "summary": "Awards $25 for each new member (maximum $250 per year) that can be used for networking events, soft‑skill training, social functions, Distinguished Lecture activities, and related items, subject to budget approval."
+    "summary": "Awards $25 for each new member (maximum $250 per year) to be used for networking events, soft‑skill training, social functions, Distinguished Lecture activities, and related items, subject to budget approval."
   },
   "873283c2bec75e64b80cd15f87adde25deabe0a0": {
     "title": "SPS Day Photo Contest",
     "amount": "$250",
     "deadline": "19 July",
-    "summary": "Chapters submit photos of their SPS Day events; the winning Chapter receives $250 of additional Chapter funding for activities."
+    "summary": "IEEE Signal Processing Society Chapters can submit photos of their SPS Day events for a chance to win $250 of additional Chapter funding for activities."
   },
   "4375452d51ba708eff700716055f3107af4502eb": {
     "title": "PES Scholarship Opportunities",
@@ -459,7 +459,7 @@
     "title": "Emerging Technology Grants Program",
     "amount": "$5,000-$25,000",
     "deadline": "15 June 2026",
-    "summary": "Provides funding for new projects, programs, or innovative activities that connect emerging technologies with the computing community. Applicants must include at least one IEEE Computer Society member on the proposal team."
+    "summary": "Provides funding for new projects, programs, or innovative activities that connect emerging technologies with the computing community, targeting IEEE Computer Society members and lasting up to 12 months."
   },
   "cbae4d2a063f402b15a84cb6d0b3e62d9355a749": {
     "title": "2026 Call for Proposals",
@@ -495,7 +495,7 @@
     "title": "Lance Stafford Larson Paper Contest",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Contest that encourages students to develop communication skills and achievements in computer science, offering monetary awards."
+    "summary": "Contest encouraging students to develop communication skills and achievements in computer science; includes monetary awards."
   },
   "699e829eac81bcad1300d81c5193f952ea7a06a6": {
     "title": "Upsilon Pi Epsilon Student Award",
@@ -507,109 +507,109 @@
     "title": "IEEE Consumer Technology Society Student Scholarship",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Scholarship for students pursuing studies in consumer technology fields."
+    "summary": "Scholarship for students supported by the IEEE Consumer Technology Society."
   },
   "d212f3500cae45f6801761fbcce9db70acee8e56": {
     "title": "IEEE Dayton Section Krishna M. Pasala, PH.D. Memorial Scholarship",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Memorial scholarship for students in the Dayton section area."
+    "summary": "Memorial scholarship for students administered by the IEEE Dayton Section."
   },
   "b393e6de3bd83e28483202b3a131a51da3e27a1e": {
     "title": "IEEE Electromagnetic Compatibility Society James C. Klouda Memorial Scholarship",
     "amount": "$1000",
     "deadline": "Not specified",
-    "summary": "Provides financial support to students studying electromagnetic compatibility."
+    "summary": "Memorial scholarship for students in the field of electromagnetic compatibility."
   },
   "d64e86b63880f4f5668bcde86832e5379b0dbbf1": {
     "title": "IEEE Electron Devices Society Undergraduate Student Scholarship",
     "amount": "US$1,000",
     "deadline": "July 15, 2026",
-    "summary": "Scholarship for undergraduate students in electron devices and related disciplines."
+    "summary": "Undergraduate scholarship for students pursuing studies in electron devices."
   },
   "676aca756f660bb039e120fc934dd20f18e85d44": {
     "title": "IEEE Power & Energy Society Erich Gunther Future Power Innovator Scholarship",
     "amount": "US $2,500",
     "deadline": "8 July",
-    "summary": "Supports students with innovative ideas in power and energy technologies."
+    "summary": "Scholarship for students interested in future power innovation."
   },
   "be045a48001e438431cdfc33905f31d6b6fb55cb": {
     "title": "IEEE Power & Energy Society G. Ray Ekenstam Memorial Scholarship",
     "amount": "US$5,000",
-    "deadline": "30 April",
-    "summary": "Memorial scholarship for students in power and energy engineering."
+    "deadline": "Mar 1",
+    "summary": "Memorial scholarship for students in power and energy disciplines."
   },
   "318fa3955c77337658e71fcec0500c0d0c7e3532": {
     "title": "IEEE Power & Energy Society John & JoAnn McDonald Undergraduate Scholarship",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Undergraduate scholarship for students pursuing power and energy studies."
+    "summary": "Undergraduate scholarship for students in power and energy fields."
   },
   "83fd1215b2e8316bedbc3e2b266f80c3151dcd14": {
     "title": "IEEE Power & Energy Society Scholarship Plus Program",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Program that provides additional scholarship funding for eligible power and energy students."
+    "summary": "Program providing additional scholarship funding for power and energy students."
   },
   "d4862cd1746ff5baccbcf89767ea901c6b6c2d44": {
     "title": "IEEE Power & Energy Society Scholarship Plus Hoveida Family Scholars",
-    "amount": "Not specified",
-    "deadline": "Not specified",
-    "summary": "Scholarship track for Hoveida Family Scholars within the Power & Energy Society."
+    "amount": "Up to $10,000 per qualifying scholar (1st & 2nd year – $3,000 each year, 3rd year – $4,000)",
+    "deadline": "14 May (Extended)",
+    "summary": "Scholarship program for power and energy students funded by the Hoveida Family Foundation."
   },
   "1dba68672c7915698d895879be0092cc4d156e3c": {
     "title": "IEEE Richland Section Jim Thomas Memorial Scholarship",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Memorial scholarship for students in the Richland section."
+    "summary": "Memorial scholarship for students supported by the IEEE Richland Section."
   },
   "1471eaddcc66fd915fc57f88a5ac8e8eba891421": {
     "title": "IEEE Signal Processing Society Scholarship Program",
     "amount": "Up to US$7,000",
     "deadline": "30 June",
-    "summary": "Provides scholarships to students pursuing studies in signal processing."
+    "summary": "Scholarship program for students in signal processing."
   },
   "557a4cfa7a62e23279e349efe951a205d0ce2031": {
     "title": "IEEE Women in Engineering Frances B. Hugle Scholarship",
     "amount": "US$2,500",
     "deadline": "8 November 2026 11:59 PM EDT",
-    "summary": "Scholarship for women engineering students supporting academic excellence."
+    "summary": "Scholarship for women pursuing engineering studies."
   },
   "b82a662d0433bc97d40c070c2977ae51b1107317": {
     "title": "IEEE Women in Engineering International Scholarship",
     "amount": "US$2,500",
     "deadline": "8 November 2026",
-    "summary": "International scholarship for women pursuing engineering education worldwide."
+    "summary": "International scholarship for women engineers."
   },
   "ad8f4afc77d64d9d9f3cd55cdbe436d9cd330f92": {
     "title": "IEEE Aerospace and Electronic Systems Michael C. Wicks Radar Student Travel Grant",
-    "amount": "$5,000",
+    "amount": "$5,000 (plus an additional $1,000 every 5th year)",
     "deadline": "Not specified",
-    "summary": "Travel grant for students to attend radar‑related conferences and events."
+    "summary": "Travel grant for students attending radar‑related conferences."
   },
   "6d115b17a245de47a379c54c4e7beda0cbf3e9a9": {
     "title": "IEEE Circuits & Systems Society Charles DeSoer LiSSA Attendance Grant",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Attendance grant for students to participate in the IEEE Biomedical Circuits and Systems Conference."
+    "summary": "Attendance grant for students to attend the IEEE Biomedical Circuits and Systems Conference."
   },
   "5531d0d04cfbe662770df43355fd4ab662306e89": {
     "title": "IEEE Circuits & Systems Society Student Travel Grants",
     "amount": "$1,500 per student",
     "deadline": "Not specified",
-    "summary": "Travel grants for students to attend IEEE Circuits & Systems conferences and workshops."
+    "summary": "Travel grants for students to attend IEEE Circuits & Systems conferences."
   },
   "5f1347719115fc50aa10880a00fe1af4119d0fa5": {
     "title": "IEEE Industry Applications Society Myron Zucker Travel Grants",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Travel funding for students to present work at Industry Applications Society events."
+    "summary": "Travel grants for students supported by the Myron Zucker program."
   },
   "6eac10c4b0e5ebacdcef3aa721f1fa3cd3629abe": {
     "title": "IEEE Vehicular Technology Society Student Travel Awards",
     "amount": "$1,000 USD",
     "deadline": "Not specified",
-    "summary": "Travel awards for students to attend Vehicular Technology Society conferences."
+    "summary": "Travel awards for students attending vehicular technology events."
   },
   "d9891349a35f3d4bbc230f578073ab39d9204287": {
     "title": "IEEE Philadelphia Section Michel Goutmann Student Travel Grant Program",
@@ -621,7 +621,7 @@
     "title": "IEEE Antennas and Propagation Society Eugene F. Knott Memorial Pre-doctoral Research Grant",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Pre-doctoral research grant supporting work in antennas and propagation."
+    "summary": "Pre‑doctoral research grant for early‑career researchers in antennas and propagation."
   },
   "e18ca6dfa70238cad1a44bf4dc1e6e550d1b0ff8": {
     "title": "IEEE Industry Applications Society Myron Zucker Student-Faculty Grant Program",
@@ -639,7 +639,7 @@
     "title": "IEEE Nuclear and Plasma Sciences Society Glenn F. Knoll Graduate Educational Grant",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Graduate educational grant for research in nuclear and plasma sciences."
+    "summary": "Educational grant for graduate students in nuclear and plasma sciences."
   },
   "46a266a360934b018ad538a860d28c58a88896ff": {
     "title": "IEEE Nuclear and Plasma Sciences Society Edward J. Hoffman Early Career Development Grant",
@@ -651,13 +651,13 @@
     "title": "IEEE Power & Energy Society Outstanding Student Scholarship",
     "amount": "US$10,000",
     "deadline": "1 March",
-    "summary": "Scholarship recognizing outstanding undergraduate or graduate students in power and energy fields."
+    "summary": "Scholarship for outstanding undergraduate students in power and energy."
   },
   "177a01813269f41cb072831580b73b1b5836413f": {
     "title": "IEEE Power Electronics Society Graduate Studies Scholarship and IEEE PELS Jan Abraham “Braham” Ferreira Scholarship",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Graduate scholarships for students pursuing advanced studies in power electronics."
+    "summary": "Graduate scholarships for students in power electronics."
   },
   "bc9989f7894b9b94c6c36fd272af77cdee4ebf2b": {
     "title": "IEEE Region 3 James H. Graham Cybersecurity Scholarship",
@@ -667,33 +667,33 @@
   },
   "aab653ba3613ce4c6b1069abc455c1493b6e1c92": {
     "title": "IEEE Systems Council James O. Gray Scholarship",
-    "amount": "Not specified",
-    "deadline": "Not specified",
-    "summary": "Scholarship for students in systems engineering and related disciplines."
+    "amount": "6000 USD",
+    "deadline": "1 January (11:59 PM UTC)",
+    "summary": "Scholarship for students in systems engineering and related fields."
   },
   "b5c35c2c7130ae99a1a6aac59fea2d05bf0d1580": {
     "title": "IEEE Charles LeGeyt Fortescue Scholarship",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Scholarship supporting undergraduate and graduate students in electrical engineering."
+    "summary": "Scholarship supporting students in electrical engineering studies."
   },
   "5ce00734eada58f078b482cc332784d3fa6d7955": {
     "title": "IEEE Life Member Committee Graduate Fellowship",
     "amount": "US$10,000 per year",
     "deadline": "4 May 2026",
-    "summary": "Fellowship for graduate study in electrical engineering for eligible candidates."
+    "summary": "Fellowship for graduate study in electrical engineering."
   },
   "10d3fd9f1d8d9738607989f8672709b00b88c01a": {
     "title": "IEEE Life Member Committee History Fellowship",
     "amount": "US$25,000 plus a research budget of up to US$3,000",
     "deadline": "Not specified",
-    "summary": "Fellowship supporting graduate research in the history of engineering and technology."
+    "summary": "Fellowship supporting graduate research in the history of engineering."
   },
   "0a473cafd167d2729cf441d4c3ec140f76b835b3": {
     "title": "IEEE-USA Washington Internships for Students of Engineering (WISE)",
     "amount": "Not specified",
     "deadline": "1 February 2026",
-    "summary": "Internship program placing engineering students in Washington, D.C. policy and industry settings."
+    "summary": "Internship program providing work‑experience opportunities for engineering students in Washington, D.C."
   },
   "1ec68e67606e4cc109a188f72a14853d6c623295": {
     "title": "Awards",
@@ -717,7 +717,7 @@
     "title": "PES Scholarship Plus",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "A scholarship program offered by the IEEE Power & Energy Society to support engineering students pursuing studies, research, or projects in power and energy."
+    "summary": "A scholarship program offered by the IEEE Power & Energy Society to support engineering students in their studies and related activities."
   },
   "c92985c8436f06b8634e6740b797b7d2f7b8e1f4": {
     "title": "Member Driven Initiatives (MDI) Program Funding",
@@ -817,21 +817,21 @@
   },
   "f9421e76ba687b90cf696e68f8c564876246dece": {
     "title": "Chapter Grants – Small Grants",
-    "amount": "up to US $500",
+    "amount": "Up to US $500",
     "deadline": "Not specified",
-    "summary": "Funding for chapter‑driven activities and events; student branch chapters may apply for small grants only."
+    "summary": "Funding for small chapter activities; student branch chapters may apply for small grants only."
   },
   "0423db858fe97053c512d4ca7235d27a32bae116": {
     "title": "Chapter Grants – Medium Grants",
     "amount": "US $500 – $1,000",
     "deadline": "Not specified",
-    "summary": "Funding for larger chapter activities and events; available to all chapters by application."
+    "summary": "Funding for medium‑sized chapter activities and events."
   },
   "4c15d0d1c92937f9f12c1f56fbf2a3673f48b76e": {
     "title": "Chapter Grants – Large Grants",
     "amount": "US $1,000 – $2,000",
     "deadline": "Not specified",
-    "summary": "Funding for major chapter initiatives; applicants must explain impact on the chapter, Computer Society, or the world."
+    "summary": "Funding for larger chapter projects; applicants must explain impact on the chapter, Computer Society, or the world."
   },
   "53f24d2b9728a074e9582db2de5b6eaf6fc56b09": {
     "title": "Newly formed chapters startup funding",
@@ -861,7 +861,7 @@
     "title": "IEEE Industry Applications Society Myron Zucker Undergraduate Student Design Contest",
     "amount": "Not specified",
     "deadline": "Not specified",
-    "summary": "Supports undergraduate students to develop and present engineering design projects."
+    "summary": "Design contest providing funding for undergraduate student projects."
   },
   "31c84123411eb435f6ff467cce4c93048ab129a0": {
     "title": "IEEE Region 3 James H Graham Cybersecurity Scholarship",
@@ -964,5 +964,35 @@
     "amount": "$5,000-$15,000",
     "deadline": "Not specified",
     "summary": "Grants for projects, programs, and events that broaden participation in computing, targeting initiatives that expand reach, impact, and inclusion in the field."
+  },
+  "cdb9238ddfed64ea4066bd8fad743e69c243c764": {
+    "title": "IEEE Antennas and Propagation Society Eugene F. Knott Memorial Pre-doctoral Research Award",
+    "amount": "Not specified",
+    "deadline": "Not specified",
+    "summary": "Pre‑doctoral research award for students in antennas and propagation."
+  },
+  "50d8ef8cc5d0ec1e585a980d50e3bcee923b379b": {
+    "title": "IEEE Industry Applications Society Myron Zucker Student‑Faculty Grant Program",
+    "amount": "Not specified",
+    "deadline": "Not specified",
+    "summary": "Grant program supporting collaborative projects between students and faculty."
+  },
+  "950dd2737e5283f73d13536f5be0100d5efae018": {
+    "title": "IEEE Nuclear and Plasma Sciences Society Glenn F. Knoll Post‑Doctoral Educational Grant",
+    "amount": "Not specified",
+    "deadline": "Not specified",
+    "summary": "Educational grant for post‑doctoral researchers in nuclear and plasma sciences."
+  },
+  "55f77f97b17913b0df1d831ea2154b4f2583e792": {
+    "title": "IEEE Nuclear and Plasma Science Society Ronald J. Jaszczak Graduate Award",
+    "amount": "Not specified",
+    "deadline": "Not specified",
+    "summary": "Award providing funding for graduate research in nuclear and plasma science."
+  },
+  "4c31d3392a4c9085c1ecef00f4610b3ca6cce3a2": {
+    "title": "IEEE Robotics and Automation Society Technical Education Program (RAS-TEP) – Main Track",
+    "amount": "Not specified",
+    "deadline": "Not specified",
+    "summary": "Provides financial support for organizers to run Technical Education Programs (seasonal schools) for early‑stage graduate students, focusing on cutting‑edge research content."
   }
 }
